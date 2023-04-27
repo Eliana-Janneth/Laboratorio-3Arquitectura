@@ -1,0 +1,116 @@
+
+entity Estudiante {
+  estudianteId Integer,
+  nombre String required
+}
+
+entity Profesor {
+  profesorId Integer required,
+  nombre String required,
+  tipo String required,
+  correoElectronico String required,
+  usuarioPortal String required
+}
+
+entity Curso {
+  cursoId Integer required,
+  codigo String required,
+  nombre String required,
+  credito Integer required,
+}
+
+entity SemestreAcademico {
+  semestreAcademicoId Integer required,
+  codigo String required,
+  estado Boolean required,
+  anio Integer required,
+  periodoAcademico Integer required,
+}
+
+entity Grupo {
+  grupoId Integer required,
+  codigo String required,
+  horario String,
+}
+entity Actividad {
+  actividadId Integer required,
+  descripcion String required,
+  porcentaje Float required,
+}
+
+entity GrupoEstudiante {
+  grupoEstudianteId Integer required,
+}
+
+entity Nota {
+  notaId Integer required,
+  nota Float required,
+  fechaCreacion LocalDate required,
+}
+entity AuditoriaNota {
+  auditoriaId Integer required,
+  notaAnterior Float required,
+  notaNueva Float required,
+  fechaModificacion LocalDate required,
+  ip String required,
+  usuarioPortal String required,
+}
+// Relación entre Profesor y Grupo
+// Un Profesor puede dictar muchos Grupos, pero un Grupo solo tiene un Profesor
+relationship ManyToOne {
+  Profesor{grupos} to Grupo{profesor}
+}
+
+// Relación entre Curso y Grupo
+// Un Curso puede tener muchos Grupos, pero un Grupo solo pertenece a un Curso
+relationship OneToMany {
+  Curso{grupos} to Grupo{curso}
+}
+
+// Relación entre SemestreAcademico y Grupo
+// Un SemestreAcademico puede tener muchos Grupos, pero un Grupo solo pertenece a un SemestreAcademico
+relationship OneToMany {
+  SemestreAcademico{grupos} to Grupo{semestreAcademico}
+}
+
+// Relación entre Grupo y GrupoEstudiante
+// Un Grupo puede tener muchos GrupoEstudiante, pero un GrupoEstudiante solo pertenece a un Grupo
+relationship OneToMany {
+  Grupo{estudiantes} to GrupoEstudiante{grupo}
+}
+
+// Relación entre Estudiante y GrupoEstudiante
+// Un Estudiante puede pertenecer a muchos GrupoEstudiante, pero un GrupoEstudiante solo tiene un Estudiante
+relationship ManyToOne {
+  Estudiante{gruposEstudiante} to GrupoEstudiante{estudiante}
+}
+
+// Relación entre Grupo y Actividad
+// Un Grupo puede tener muchas Actividades, pero una Actividad solo pertenece a un Grupo
+relationship OneToMany {
+  Grupo{actividades} to Actividad{grupo}
+}
+
+// Relación entre Actividad y Nota
+// Una Actividad puede tener muchas Notas, pero una Nota solo pertenece a una Actividad
+relationship OneToMany {
+  Actividad{notas} to Nota{actividad}
+}
+
+// Relación entre GrupoEstudiante y Nota
+// Un GrupoEstudiante puede tener muchas Notas, pero una Nota solo pertenece a un GrupoEstudiante
+relationship OneToMany {
+  GrupoEstudiante{notas} to Nota{grupoEstudiante}
+}
+
+// Relación entre Profesor y AuditoriaNota
+// Un Profesor puede tener muchas AuditoriaNota, pero una AuditoriaNota solo pertenece a un Profesor
+relationship OneToMany {
+  Profesor{auditoriasNota} to AuditoriaNota{profesor}
+}
+
+// Relación entre Nota y AuditoriaNota
+// Una Nota puede tener muchas AuditoriaNota, pero una AuditoriaNota solo pertenece a una Nota
+relationship OneToMany {
+  Nota{auditoriasNota} to AuditoriaNota{nota}
+}

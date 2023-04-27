@@ -7,6 +7,15 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "estudiante": "Estudiante",
+        "profesor": "Profesor",
+        "curso": "Curso",
+        "semestreAcademico": "Semestre Academico",
+        "grupo": "Grupo",
+        "actividad": "Actividad",
+        "grupoEstudiante": "Grupo Estudiante",
+        "nota": "Nota",
+        "auditoriaNota": "Auditoria Nota",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

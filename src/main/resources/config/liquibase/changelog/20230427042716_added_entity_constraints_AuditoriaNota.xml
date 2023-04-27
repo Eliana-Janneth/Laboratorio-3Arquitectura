@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity AuditoriaNota.
+    -->
+    <changeSet id="20230427042716-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="profesor_id"
+                                 baseTableName="auditoria_nota"
+                                 constraintName="fk_auditoria_nota__profesor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="nota_id"
+                                 baseTableName="auditoria_nota"
+                                 constraintName="fk_auditoria_nota__nota_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nota"/>
+    </changeSet>
+</databaseChangeLog>

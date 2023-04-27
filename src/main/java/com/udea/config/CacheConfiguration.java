@@ -48,6 +48,25 @@ public class CacheConfiguration {
             createCache(cm, com.udea.domain.User.class.getName());
             createCache(cm, com.udea.domain.Authority.class.getName());
             createCache(cm, com.udea.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.udea.domain.Estudiante.class.getName());
+            createCache(cm, com.udea.domain.Profesor.class.getName());
+            createCache(cm, com.udea.domain.Profesor.class.getName() + ".auditoriasNotas");
+            createCache(cm, com.udea.domain.Curso.class.getName());
+            createCache(cm, com.udea.domain.Curso.class.getName() + ".grupos");
+            createCache(cm, com.udea.domain.SemestreAcademico.class.getName());
+            createCache(cm, com.udea.domain.SemestreAcademico.class.getName() + ".grupos");
+            createCache(cm, com.udea.domain.Grupo.class.getName());
+            createCache(cm, com.udea.domain.Grupo.class.getName() + ".estudiantes");
+            createCache(cm, com.udea.domain.Grupo.class.getName() + ".actividades");
+            createCache(cm, com.udea.domain.Grupo.class.getName() + ".profesors");
+            createCache(cm, com.udea.domain.Actividad.class.getName());
+            createCache(cm, com.udea.domain.Actividad.class.getName() + ".notas");
+            createCache(cm, com.udea.domain.GrupoEstudiante.class.getName());
+            createCache(cm, com.udea.domain.GrupoEstudiante.class.getName() + ".notas");
+            createCache(cm, com.udea.domain.GrupoEstudiante.class.getName() + ".estudiantes");
+            createCache(cm, com.udea.domain.Nota.class.getName());
+            createCache(cm, com.udea.domain.Nota.class.getName() + ".auditoriasNotas");
+            createCache(cm, com.udea.domain.AuditoriaNota.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

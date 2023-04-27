@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427042715",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "nota",
+  "fields": [
+    {
+      "fieldName": "notaId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nota",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaCreacion",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Nota",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "auditoriaNota",
+      "otherEntityRelationshipName": "nota",
+      "relationshipName": "auditoriasNota",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "actividad",
+      "otherEntityRelationshipName": "notas",
+      "relationshipName": "actividad",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "grupoEstudiante",
+      "otherEntityRelationshipName": "notas",
+      "relationshipName": "grupoEstudiante",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

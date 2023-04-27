@@ -1,0 +1,61 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427042712",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "grupo",
+  "fields": [
+    {
+      "fieldName": "grupoId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "codigo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "horario",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Grupo",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "grupoEstudiante",
+      "otherEntityRelationshipName": "grupo",
+      "relationshipName": "estudiantes",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "actividad",
+      "otherEntityRelationshipName": "grupo",
+      "relationshipName": "actividades",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "curso",
+      "otherEntityRelationshipName": "grupos",
+      "relationshipName": "curso",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "semestreAcademico",
+      "otherEntityRelationshipName": "grupos",
+      "relationshipName": "semestreAcademico",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "profesor",
+      "otherEntityRelationshipName": "grupos",
+      "relationshipName": "profesor",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427042713",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "actividad",
+  "fields": [
+    {
+      "fieldName": "actividadId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "porcentaje",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Actividad",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nota",
+      "otherEntityRelationshipName": "actividad",
+      "relationshipName": "notas",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "grupo",
+      "otherEntityRelationshipName": "actividades",
+      "relationshipName": "grupo",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

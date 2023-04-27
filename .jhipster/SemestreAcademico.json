@@ -1,0 +1,48 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427042711",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "semestre_academico",
+  "fields": [
+    {
+      "fieldName": "semestreAcademicoId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "codigo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "anio",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "periodoAcademico",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SemestreAcademico",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "grupo",
+      "otherEntityRelationshipName": "semestreAcademico",
+      "relationshipName": "grupos",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

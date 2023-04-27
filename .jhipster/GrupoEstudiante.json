@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427042714",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "grupo_estudiante",
+  "fields": [
+    {
+      "fieldName": "grupoEstudianteId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GrupoEstudiante",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nota",
+      "otherEntityRelationshipName": "grupoEstudiante",
+      "relationshipName": "notas",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "grupo",
+      "otherEntityRelationshipName": "estudiantes",
+      "relationshipName": "grupo",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "estudiante",
+      "otherEntityRelationshipName": "gruposEstudiante",
+      "relationshipName": "estudiante",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

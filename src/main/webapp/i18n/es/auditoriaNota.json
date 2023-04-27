@@ -1,0 +1,31 @@
+{
+  "labArquiJHipsterApp": {
+    "auditoriaNota": {
+      "home": {
+        "title": "Auditoria Notas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Auditoria Nota",
+        "createOrEditLabel": "Crear o editar Auditoria Nota",
+        "notFound": "Ningún Auditoria Notas encontrado"
+      },
+      "created": "Un nuevo Auditoria Nota ha sido creado con el identificador {{ param }}",
+      "updated": "Un Auditoria Nota ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Auditoria Nota ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Auditoria Nota {{ id }}?"
+      },
+      "detail": {
+        "title": "Auditoria Nota"
+      },
+      "id": "ID",
+      "auditoriaId": "Auditoria Id",
+      "notaAnterior": "Nota Anterior",
+      "notaNueva": "Nota Nueva",
+      "fechaModificacion": "Fecha Modificacion",
+      "ip": "Ip",
+      "usuarioPortal": "Usuario Portal",
+      "profesor": "Profesor",
+      "nota": "Nota"
+    }
+  }
+}

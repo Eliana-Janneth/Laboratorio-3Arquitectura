@@ -1,0 +1,29 @@
+{
+  "labArquiJHipsterApp": {
+    "semestreAcademico": {
+      "home": {
+        "title": "Semestre Academicos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Semestre Academico",
+        "createOrEditLabel": "Crear o editar Semestre Academico",
+        "notFound": "Ningún Semestre Academicos encontrado"
+      },
+      "created": "Un nuevo Semestre Academico ha sido creado con el identificador {{ param }}",
+      "updated": "Un Semestre Academico ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Semestre Academico ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Semestre Academico {{ id }}?"
+      },
+      "detail": {
+        "title": "Semestre Academico"
+      },
+      "id": "ID",
+      "semestreAcademicoId": "Semestre Academico Id",
+      "codigo": "Codigo",
+      "estado": "Estado",
+      "anio": "Anio",
+      "periodoAcademico": "Periodo Academico",
+      "grupos": "Grupos"
+    }
+  }
+}

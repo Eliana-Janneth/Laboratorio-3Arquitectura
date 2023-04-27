@@ -1,0 +1,27 @@
+{
+  "labArquiJHipsterApp": {
+    "grupoEstudiante": {
+      "home": {
+        "title": "Grupo Estudiantes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Grupo Estudiante",
+        "createOrEditLabel": "Create or edit a Grupo Estudiante",
+        "notFound": "No Grupo Estudiantes found"
+      },
+      "created": "A new Grupo Estudiante is created with identifier {{ param }}",
+      "updated": "A Grupo Estudiante is updated with identifier {{ param }}",
+      "deleted": "A Grupo Estudiante is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Grupo Estudiante {{ id }}?"
+      },
+      "detail": {
+        "title": "Grupo Estudiante"
+      },
+      "id": "ID",
+      "grupoEstudianteId": "Grupo Estudiante Id",
+      "notas": "Notas",
+      "grupo": "Grupo",
+      "estudiante": "Estudiante"
+    }
+  }
+}
