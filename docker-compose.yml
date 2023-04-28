@@ -1,7 +1,5 @@
-# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-version: '3.8'
 services:
-  labarqui_jhipster-app:
+  labarqui_jhipster:
     image: labarqui_jhipster
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
@@ -9,27 +7,14 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - SPRING_DATASOURCE_URL=jdbc:mysql://labarqui_jhipster-mysql:3306/labarqui_jhipster?useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
       - SPRING_LIQUIBASE_URL=jdbc:mysql://labarqui_jhipster-mysql:3306/labarqui_jhipster?useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-    # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
+      - JHIPSTER_SLEEP=30
     ports:
-      - 127.0.0.1:8080:8080
+      - '8080:8080'
   labarqui_jhipster-mysql:
     image: mysql:8.0.30
-    # volumes:
-    #   - ~/volumes/jhipster/labArqui_JHipster/mysql/:/var/lib/mysql/
     volumes:
       - ./config/mysql:/etc/mysql/conf.d
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=labarqui_jhipster
-      - MYSQL_ROOT_HOST= labarqui_jhipster-mysql
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=admin
-
-    # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
-    ports:
-      - 127.0.0.1:3306:3306
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
